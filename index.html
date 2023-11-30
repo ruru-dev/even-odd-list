@@ -4,30 +4,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Even Odd List</title>
+  
   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <h1>Even Odd Lists</h1>
+  <h1 class="webpage-title">Even Odd Lists</h1>
     <hr/> 
     <form id="even-odd-form" autocomplete="off" target="_blank">
-      <div> 
-        <label for="word">word</label> 
+      <div class="enter-word"> 
+        <label for="word">Enter Your Word</label> 
         <input type="text" name="word" id="word"  placeholder="what's your word?" onkeyup="updateWord(this)" onkeypress="return runScript(event)"> 
       </div>
-      <div>
-        <input type="button" value="Even or Odd?" onclick="handleSubmit()">
+      <div class="even-odd-submit-container">
+        <input class="even-odd-submit-button" type="button" value="Even or Odd?" onclick="handleSubmit()">
       </div>
     </form>
 
-    <section>
-      <h2>Even</h2>
-      <ul id="even"></ul>
-    </section>
-    <section>
-      <h2>Odd</h2>
-      <ul   id="odd"></ul>
-    </section>
+    <div class="lists">
+  
+      <section class="even-list">
+        <h2>Even</h2>
+        <div class="white-board">
+          <ul id="even"></ul>
+        </div>
+      </section>
+
+      <section class="odd-list">
+        <h2>Odd</h2>
+        <div class="white-board">
+          <ul id="odd"></ul>
+        </div>
+      </section>
+
+    </div>
 
 </body>
 </html>

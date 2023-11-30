@@ -2,6 +2,7 @@ const handleSubmit = function () {
   let word = document.getElementById("word").value;
   let wordLength = word.length;
   let listWord = document.createElement("li");
+  
   listWord.innerText = word;
 
   if (wordLength % 2 === 0) {
